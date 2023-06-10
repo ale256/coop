@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # custom config
-DATA=/path/to/datasets
+DATA=/research/d1/rshr/ajle/
 TRAINER=CoOp
 
 DATASET=$1
