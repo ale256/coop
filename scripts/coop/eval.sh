@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # custom config
-DATA=/research/d1/rshr/ajle/
+DATA=/research/d1/rshr/ajle/DATA_coop/
 TRAINER=CoOp
 SHOTS=$5
 NCTX=$4
