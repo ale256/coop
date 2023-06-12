@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # custom config
-DATA=/path/to/datasets
+DATA=/research/d1/rshr/ajle/
 TRAINER=CoOp
-SHOTS=16
-NCTX=16
-CSC=False
-CTP=end
+SHOTS=$5
+NCTX=$4
+CSC=$6
+CTP=$3
 
 DATASET=$1
 CFG=$2
