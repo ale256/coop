@@ -254,7 +254,8 @@ class CoOp(TrainerX):
         device_count = torch.cuda.device_count()
         if device_count > 1:
             print(f"Multiple GPUs detected (n_gpus={device_count}), use all of them!")
-            self.model = nn.DataParallel(self.model)
+            #self.model = nn.DataParallel(self.model)
+            self.model.text_encoder = nn.DataParallel(self.model.text_encoder)
 
     def forward_backward(self, batch):
         image, label = self.parse_batch_train(batch)
