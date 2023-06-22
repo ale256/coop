@@ -37,7 +37,7 @@ _MODELS = {
 
 
 def _download(url: str, root: str = os.path.expanduser("~/.cache/clip")):
-    root = "/research/d1/rshr/ajle/"
+    root = "/research/d1/rshr/ajle/.cache/clip/"
     os.makedirs(root, exist_ok=True)
     filename = os.path.basename(url)
 
@@ -219,4 +219,4 @@ def tokenize(texts: Union[str, List[str]], context_length: int = 77, truncate: b
                 raise RuntimeError(f"Input {texts[i]} is too long for context length {context_length}")
         result[i, :len(tokens)] = torch.tensor(tokens)
 
-    return result
+    return result # shape: [number of input strings, context_length]
